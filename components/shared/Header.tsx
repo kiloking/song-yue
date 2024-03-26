@@ -1,4 +1,4 @@
-import Image from "next/image";
+import { motion } from 'framer-motion';
 import Footer from "./Footer";
 const Header = () => {
   return (
@@ -8,7 +8,11 @@ const Header = () => {
         style={{backgroundImage: `url('/images/header_bg.png')`}}
       >
         <div className=' absolute top-32 left-1/2 -translate-x-1/2  w-2/5 mx-auto' >
-          <img src={'/images/header_title.png'} alt="" className='w-full' data-aos="fade-down" data-aos-duration="1500" />
+          <motion.img 
+            initial={{ opacity: 0, y: -50 }} 
+            animate={{ opacity: 1, y: 0 }} 
+            transition={{ duration: 1 }} 
+            src={'/images/header_title.png'} alt="" className='w-full' data-aos="fade-down" data-aos-duration="1500" />
         </div>
 
       </div>

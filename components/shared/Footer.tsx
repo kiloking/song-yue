@@ -127,7 +127,7 @@ const Footer = () => {
                   <select className="block  bg-white  w-full px-3 py-2 "  {...register("main_district", { required: false})} onChange={(e)=>{
                     handleChange(e)
                   }}>
-                    <option defaultValue value="">居住縣市</option>
+                    <option  value="">居住縣市</option>
                     {
                       taiwan_districts.map((item,index)=>{
                         return(
@@ -139,7 +139,7 @@ const Footer = () => {
                 </div>
                 <div className='w-full  '>
                   <select className="block  bg-white  w-full px-3 py-2  "  {...register("sub_district", { required: false})}>
-                    <option defaultValue value="">居住地區</option>
+                    <option  value="">居住地區</option>
                     {
                       subDistricts.map((item,index)=>{
                         return(
