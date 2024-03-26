@@ -7,6 +7,9 @@ const inter = Inter({ subsets: ["latin"] });
 export const metadata: Metadata = {
   title: "大清松玥",
   description: "青埔森活圈 純粹獨一 均質兩房 大清機構看度鉅作 21-31 坪",
+  openGraph: {
+    images: '/images/web01.jpeg',
+  }
 };
 
 export default function RootLayout({
