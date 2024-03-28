@@ -62,8 +62,14 @@ const Footer = () => {
 
   const formRef = useRef<HTMLFormElement>(null);
   const sendEmail = () => {
-
-
+    if (typeof service_id === "undefined" || typeof template_id === "undefined" || typeof public_id === "undefined") {
+      console.error("Email service configuration is missing.");
+      return;
+    }
+    if (formRef.current === null) {
+      console.error("Form not initialized.");
+      return;
+    }
     emailjs.sendForm(service_id, template_id, formRef.current, public_id)
       .then((result) => {
           console.log(result.text);
