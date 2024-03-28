@@ -26,7 +26,7 @@ const Header = () => {
 
       </div>
 
-      <div className='md:col-span-2 bg-[#F5BDC2]'>
+      <div className='md:col-span-2 bg-[#2C5489]'>
         <Footer />
       </div>
 

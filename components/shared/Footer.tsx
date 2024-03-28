@@ -1,9 +1,11 @@
 'use client'
-import React,{useState,useEffect, ChangeEvent, FormEvent} from 'react'
+import React,{useState,useEffect, ChangeEvent, FormEvent,useRef} from 'react'
 import Image from "next/image";
 import { useForm } from "react-hook-form";
 import { Modal } from "./Modal";
 import taiwan_districts from '@/constants/taiwan_districts.json'
+import emailjs from '@emailjs/browser';
+
 interface FormValues {
   name: string;
   tel: string;
@@ -23,6 +25,9 @@ interface District {
 }
 
 const Footer = () => {
+  const service_id = process.env.NEXT_PUBLIC_YOUR_SERVICE_ID;
+  const template_id = process.env.NEXT_PUBLIC_YOUR_TEMPLATE_ID;
+  const public_id = process.env.NEXT_PUBLIC_YOUR_PUBLIC_KEY;
   const [msgMailTitle,setMsgMailTitle] = useState('大清松玥網站的表單')
   const [mailSent, setmailSent] = useState(false);
   const [error, setError] = useState(null);
@@ -54,6 +59,27 @@ const Footer = () => {
   const test =()=>{
     console.log('1235566')
   }
+
+  const formRef = useRef<HTMLFormElement>(null);
+  const sendEmail = () => {
+
+
+    emailjs.sendForm(service_id, template_id, formRef.current, public_id)
+      .then((result) => {
+          console.log(result.text);
+          if(result.text === 'OK'){
+            sendFormStatusModal()
+            reset()
+            setSubmitDisabled(true); // 提交成功後禁用按鈕
+
+            setTimeout(() => {
+              setSubmitDisabled(false); // 10秒後啟用按鈕
+            }, 10000);
+          }
+      }, (error) => {
+          console.log(error);
+      });
+  };
   const onSubmit = (data: FormValues) => {
     console.log(data)
 
@@ -108,7 +134,7 @@ const Footer = () => {
 
           {/* 表單 */}
           <div className='md:w-full mx-auto'>
-            <form onSubmit={handleSubmit(onSubmit)} className="w-full mx-auto pt-5  rel" data-aos="fade-up" data-aos-duration="1500" >
+            <form onSubmit={handleSubmit(sendEmail)} className="w-full mx-auto pt-5  rel" data-aos="fade-up" data-aos-duration="1500" ref={formRef}>
 
               <div className='w-full  my-3 '>
                 <input type="text" className="block  bg-white  w-full
