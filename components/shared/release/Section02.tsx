@@ -1,4 +1,6 @@
 import React from 'react'
+import dynamic from "next/dynamic";
+const ReactPlayer = dynamic(() => import("react-player/lazy"), { ssr: false });
 import { Swiper, SwiperSlide } from 'swiper/react';
 import { Pagination, Autoplay } from "swiper/modules";
 // Import Swiper styles
@@ -13,6 +15,15 @@ const Section02 = () => {
   ]
   return (
     <div className='w-full pt-10 md:pt-24 md:pb-20 pb-8 relative'>
+        <video
+          autoPlay
+          muted
+          loop
+          style={{ height: "100%", width: "100%", objectFit: "cover" }} //object-fit:cover
+          className=' absolute top-0 left-0 right-0 w-full h-[100%] z-0'
+        >
+          <source src={'https://pub-a73f7d8384414e33a55eebf09fd805cd.r2.dev/bg.mp4'} type="video/mp4" />
+        </video>
       <div className='w-4/12 mx-auto relative'>
         <img src="/images/release/section02_title.png" alt="" className='w-full' data-aos="fade-up" />
         <div className=' absolute bottom-4 md:bottom-14 -left-[30px] md:-left-32   w-[10%]' data-aos="fade"><img src="/images/release/bird01.png" alt="" className='w-full' /></div>
