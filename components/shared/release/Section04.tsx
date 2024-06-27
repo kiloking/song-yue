@@ -7,6 +7,7 @@ const Section04 = () => {
         autoPlay
         muted
         loop
+        playsInline
         style={{ height: "100%", width: "100%", objectFit: "cover" }} //object-fit:cover
         className=" absolute top-0 left-0 right-0 w-full h-[100%] z-0 pointer-events-none"
       >
