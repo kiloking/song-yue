@@ -49,7 +49,7 @@ const Section02 = () => {
         </div>
       </div>
 
-      <div className="w-full md:w-3/4 mx-auto mt-10">
+      <div className="w-full md:w-3/4 mx-auto mt-5 md:mt-10">
         <img
           src="/images/release/section02_map.png"
           alt=""
@@ -58,7 +58,7 @@ const Section02 = () => {
         />
       </div>
 
-      <div className="my-14 flex items-center gap-10 w-full md:w-3/4 mx-auto">
+      <div className="my-5 md:my-14 flex items-center gap-10 w-full md:w-3/4 mx-auto">
         <div className="w-1/2">
           <Swiper
             spaceBetween={30}
