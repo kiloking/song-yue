@@ -11,7 +11,12 @@ const Section02 = () => {
     { img: "section02_p01.png" },
     { img: "section02_p02.png" },
     { img: "section02_p03.png" },
-    { img: "section02_p04.png" },
+  ];
+  const data2 = [
+    { img: "section02_p2-01.png" },
+    { img: "section02_p2-02.png" },
+    { img: "section02_p2-03.png" },
+    { img: "section02_p2-04.png" },
   ];
   return (
     <div className="w-full pt-10 md:pt-24 md:pb-20 pb-8 relative">
@@ -89,10 +94,41 @@ const Section02 = () => {
           />
         </div>
       </div>
+      <div className="my-5 md:my-14 flex items-center gap-10 w-full md:w-3/4 mx-auto">
+        <div className="md:p-10">
+          <img
+            src="/images/release/section02_text2.png"
+            alt=""
+            className="w-full"
+            data-aos="fade"
+          />
+        </div>
+        <div className="w-1/2">
+          <Swiper
+            spaceBetween={30}
+            slidesPerView={1}
+            loop={true}
+            speed={600}
+            pagination={{
+              clickable: true,
+            }}
+            modules={[Pagination]}
+            className=""
+          >
+            {data2.map((item, index) => {
+              return (
+                <SwiperSlide key={item.img}>
+                  <img src={`/images/release/${item.img}`} alt="" />
+                </SwiperSlide>
+              );
+            })}
+          </Swiper>
+        </div>
+      </div>
 
-      <div className=" absolute bottom-0 right-0 w-[45%]">
+      <div className=" absolute bottom-0 left-0 w-[45%]">
         <img
-          src="/images/release/section02_bottom.png"
+          src="/images/release/section02_bottom2.png"
           alt=""
           className="w-full"
         />
