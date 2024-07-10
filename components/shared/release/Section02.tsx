@@ -63,7 +63,7 @@ const Section02 = () => {
         />
       </div>
 
-      <div className="my-5 md:my-14 flex items-center gap-10 w-full md:w-3/4 mx-auto">
+      <div className="my-5 md:my-14 flex items-center gap-10 w-11/12 md:w-3/4 mx-auto">
         <div className="w-1/2">
           <Swiper
             spaceBetween={30}
@@ -94,7 +94,7 @@ const Section02 = () => {
           />
         </div>
       </div>
-      <div className="my-5 md:my-14 flex items-center gap-10 w-full md:w-3/4 mx-auto">
+      <div className="my-5 md:my-14 flex items-center gap-10 w-11/12 md:w-3/4 mx-auto">
         <div className="md:p-10">
           <img
             src="/images/release/section02_text2.png"
