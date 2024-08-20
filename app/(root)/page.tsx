@@ -1,19 +1,18 @@
-'use client';
+"use client";
 import Footer from "@/components/shared/release/Footer";
 import Header from "@/components/shared/release/Header";
-import Section01 from "@/components/shared/release/Section01";
-import Section02 from "@/components/shared/release/Section02";
+import NewS01 from "@/components/shared/release/NewS01";
+import NewS02 from "@/components/shared/release/NewS02";
 import Section03 from "@/components/shared/release/Section03";
-import Section04 from "@/components/shared/release/Section04";
+import NewS04 from "@/components/shared/release/NewS04";
 export default function Home() {
-
   return (
     <main className="">
       <Header />
-      <Section01 />
-      <Section02 />
+      <NewS01 />
+      <NewS02 />
       <Section03 />
-      <Section04 />
+      <NewS04 />
       <Footer />
     </main>
   );
