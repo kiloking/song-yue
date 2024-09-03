@@ -17,16 +17,22 @@ const NewS02 = () => {
     { img: "new_s2_p06.png" },
   ];
   const news02group02 = [
-    { img: "new_s02_3_p01.png" },
-    { img: "new_s02_3_p02.png" },
-    { img: "new_s02_3_p03.png" },
-    { img: "new_s02_3_p04.png" },
+    { img: "new_s02_3_p1-1.png", text: "new_s02_3_p1-1t.png" },
+    { img: "new_s02_3_p1-2.png", text: "new_s02_3_p1-2t.png" },
+    { img: "new_s02_3_p1-3.png", text: "new_s02_3_p1-3t.png" },
+    { img: "new_s02_3_p1-4.png", text: "new_s02_3_p1-4t.png" },
   ];
 
   const news02group03 = [
-    { img: "new_s02_4_p01.png" },
-    { img: "new_s02_4_p02.png" },
-    { img: "new_s02_4_p03.png" },
+    { img: "new_s02_4_p1-1.png", text: "new_s02_4_p1-1t.png" },
+    { img: "new_s02_4_p1-2.png", text: "new_s02_4_p1-2t.png" },
+    { img: "new_s02_4_p1-3.png", text: "new_s02_4_p1-3t.png" },
+  ];
+
+  const new02group04 = [
+    { img: "new_s02_2_p1-1.png" },
+    { img: "new_s02_2_p1-2.png" },
+    { img: "new_s02_2_p1-3.png" },
   ];
 
   return (
@@ -93,8 +99,8 @@ const NewS02 = () => {
           </Swiper>
         </div>
       </div>
-      <div className="my-5 md:my-14 flex items-center gap-10 w-11/12 md:w-3/4 mx-auto">
-        <div className="md:p-10">
+      <div className="my-5 md:my-14 flex flex-col lg:flex-row items-center gap-10 w-11/12 md:w-3/4 mx-auto">
+        <div className="p-2 lg:p-10">
           <img
             src="/images/release/section02_text2.png"
             alt=""
@@ -102,7 +108,7 @@ const NewS02 = () => {
             data-aos="fade"
           />
         </div>
-        <div className="w-1/2">
+        <div className="w-full lg:w-1/2">
           <Swiper
             spaceBetween={30}
             slidesPerView={1}
@@ -111,7 +117,11 @@ const NewS02 = () => {
             pagination={{
               clickable: true,
             }}
-            modules={[Pagination]}
+            autoplay={{
+              delay: 1200,
+              disableOnInteraction: false,
+            }}
+            modules={[Pagination, Autoplay]}
             className=""
           >
             {news02group01.map((item, index) => {
@@ -133,12 +143,40 @@ const NewS02 = () => {
             data-aos="fade-up"
           />
         </div>
-        <img
-          src="/images/release/new/new_s02_2_p01.png"
-          alt=""
-          className="w-full"
-          data-aos="fade-up"
-        />
+        <div className="w-full hidden lg:block">
+          <img
+            src="/images/release/new/new_s02_2_p01.png"
+            alt=""
+            className="w-full"
+            data-aos="fade-up"
+          />
+        </div>
+        <div className="w-full lg:hidden">
+          <Swiper
+            spaceBetween={10}
+            slidesPerView={1.5}
+            centeredSlides={true}
+            loop={true}
+            speed={600}
+            pagination={{
+              clickable: true,
+            }}
+            modules={[Pagination]}
+            className="w-full"
+          >
+            {new02group04.map((item, index) => {
+              return (
+                <SwiperSlide key={item.img}>
+                  <img
+                    src={`/images/release/new/${item.img}`}
+                    alt=""
+                    className="w-full"
+                  />
+                </SwiperSlide>
+              );
+            })}
+          </Swiper>
+        </div>
       </div>
 
       <div className="my-5 md:my-14 flex items-center gap-10 w-11/12 md:w-3/4 mx-auto">
@@ -151,13 +189,24 @@ const NewS02 = () => {
             pagination={{
               clickable: true,
             }}
-            modules={[Pagination]}
+            modules={[Pagination, Autoplay]}
+            autoplay={{
+              delay: 1200,
+              disableOnInteraction: false,
+            }}
             className=""
           >
             {news02group02.map((item, index) => {
               return (
                 <SwiperSlide key={item.img}>
-                  <img src={`/images/release/new/${item.img}`} alt="" />
+                  <div className="flex items-center gap-10 flex-col lg:flex-row">
+                    <div className="order-2 lg:order-1 ">
+                      <img src={`/images/release/new/${item.img}`} alt="" />
+                    </div>
+                    <div className="order-1 lg:order-2 p-2 lg:p-10">
+                      <img src={`/images/release/new/${item.text}`} alt="" />
+                    </div>
+                  </div>
                 </SwiperSlide>
               );
             })}
@@ -174,13 +223,24 @@ const NewS02 = () => {
             pagination={{
               clickable: true,
             }}
-            modules={[Pagination]}
+            modules={[Pagination, Autoplay]}
+            autoplay={{
+              delay: 1200,
+              disableOnInteraction: false,
+            }}
             className=""
           >
             {news02group03.map((item, index) => {
               return (
                 <SwiperSlide key={item.img}>
-                  <img src={`/images/release/new/${item.img}`} alt="" />
+                  <div className="flex items-center gap-10 flex-col lg:flex-row">
+                    <div className="order-2 lg:order-2 ">
+                      <img src={`/images/release/new/${item.img}`} alt="" />
+                    </div>
+                    <div className="order-1 lg:order-1 p-2 lg:p-10">
+                      <img src={`/images/release/new/${item.text}`} alt="" />
+                    </div>
+                  </div>
                 </SwiperSlide>
               );
             })}
