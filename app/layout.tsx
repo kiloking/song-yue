@@ -1,7 +1,6 @@
 import type { Metadata } from "next";
 import { Inter } from "next/font/google";
 import "./globals.css";
-import webcover from "/public/images/web02.jpg";
 const inter = Inter({ subsets: ["latin"] });
 
 export const metadata: Metadata = {
@@ -12,7 +11,7 @@ export const metadata: Metadata = {
     description: "青埔森活圈 純粹獨一 均質兩房 大清機構看度鉅作 21-31 坪",
     images: [
       {
-        url: webcover.src,
+        url: "https://web.forestdev.work/songyueweb02.jpg",
         width: 800, // 可以根據實際圖片大小設置
         height: 600,
         alt: "大清松玥",
