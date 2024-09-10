@@ -12,12 +12,14 @@ export const metadata: Metadata = {
     description: "青埔森活圈 純粹獨一 均質兩房 大清機構看度鉅作 21-31 坪",
     images: [
       {
-        url: "/images/web01.jpeg",
+        url: "/images/web02.png",
         width: 800, // 可以根據實際圖片大小設置
         height: 600,
         alt: "大清松玥",
       },
     ],
+    locale: "zh_TW", // 可以根據需求設置 locale
+    type: "website", // 可選：你可以設置 `type` 為 `website`, `article`, 等
   },
 };
 
