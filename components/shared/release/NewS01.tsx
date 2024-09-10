@@ -1,9 +1,10 @@
 import React from "react";
 import { Swiper, SwiperSlide } from "swiper/react";
-import { Pagination, Autoplay } from "swiper/modules";
+import { Pagination, Autoplay, EffectFade } from "swiper/modules";
 // Import Swiper styles
 import "swiper/css";
 import "swiper/css/pagination";
+import "swiper/css/effect-fade";
 const NewS01 = () => {
   const data = [{ img: "new_s01_p01.png" }, { img: "new_s01_p02.png" }];
   return (
@@ -14,10 +15,8 @@ const NewS01 = () => {
           slidesPerView={1}
           loop={true}
           speed={600}
-          pagination={{
-            clickable: true,
-          }}
-          modules={[Pagination, Autoplay]}
+          modules={[Pagination, Autoplay, EffectFade]}
+          effect="fade"
           className=""
         >
           {data.map((item, index) => {

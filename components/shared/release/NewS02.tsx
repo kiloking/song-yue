@@ -99,21 +99,21 @@ const NewS02 = () => {
           </Swiper>
         </div>
       </div>
-      <div className="my-5 md:my-14 flex flex-col lg:flex-row items-center gap-10 w-11/12 md:w-3/4 mx-auto">
+      <div className="my-5 md:my-14 flex flex-col lg:flex-col items-center gap-10 w-11/12 md:w-3/4 mx-auto">
         <div className="p-2 lg:p-10">
           <img
-            src="/images/release/section02_text2.png"
+            src="/images/release/new/new_s2_text2.png"
             alt=""
             className="w-full"
             data-aos="fade"
           />
         </div>
-        <div className="w-full lg:w-1/2">
+        <div className="w-full ">
           <Swiper
             spaceBetween={30}
             slidesPerView={1}
             loop={true}
-            speed={600}
+            speed={800}
             pagination={{
               clickable: true,
             }}
@@ -134,7 +134,7 @@ const NewS02 = () => {
           </Swiper>
         </div>
       </div>
-      <div className="my-5 md:my-24  ">
+      <div className="my-5 md:my-14 flex flex-col lg:flex-col items-center gap-10 w-11/12 md:w-3/4 mx-auto">
         <div className=" my-5 md:my-12 gap-10 w-11/12 md:w-2/4 mx-auto">
           <img
             src="/images/release/new/new_s02_2_title.png"
@@ -143,18 +143,11 @@ const NewS02 = () => {
             data-aos="fade-up"
           />
         </div>
-        <div className="w-full hidden lg:block">
-          <img
-            src="/images/release/new/new_s02_2_p01.png"
-            alt=""
-            className="w-full"
-            data-aos="fade-up"
-          />
-        </div>
-        <div className="w-full lg:hidden">
+
+        <div className="w-full ">
           <Swiper
             spaceBetween={10}
-            slidesPerView={1.5}
+            slidesPerView={1}
             centeredSlides={true}
             loop={true}
             speed={600}
