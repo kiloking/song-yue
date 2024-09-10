@@ -1,7 +1,7 @@
 import type { Metadata } from "next";
 import { Inter } from "next/font/google";
 import "./globals.css";
-import webcover from "/public/images/web02.png";
+import webcover from "/public/images/web02.jpg";
 const inter = Inter({ subsets: ["latin"] });
 
 export const metadata: Metadata = {
