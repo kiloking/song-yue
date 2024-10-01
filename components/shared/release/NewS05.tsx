@@ -8,11 +8,11 @@ import "swiper/css/effect-fade";
 const NewS05 = () => {
   const imgs = [
     "news05_p01.png",
-    "news05_p02.png",
+    "news05_p02.jpg",
     "news05_p03.png",
     "news05_p04.png",
-    "news05_p05.png",
-    "news05_p06.png",
+    "news05_p05.jpg",
+    "news05_p06.jpg",
   ];
   return (
     <div className="w-full  relative">

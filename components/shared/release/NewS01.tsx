@@ -8,7 +8,7 @@ import "swiper/css/effect-fade";
 const NewS01 = () => {
   const data = [{ img: "new_s01_p01.png" }, { img: "new_s01_p02.png" }];
   return (
-    <div className="w-fullrelative">
+    <div className="w-full relative">
       <div className="w-full">
         <Swiper
           spaceBetween={30}
@@ -27,6 +27,14 @@ const NewS01 = () => {
             );
           })}
         </Swiper>
+      </div>
+      <div className="ratio ratio-16x9">
+        <video
+          id="video-player"
+          src="https://web.forestdev.work/songyue/0920.mp4"
+          controls
+          poster="https://web.forestdev.work/songyue/0920.jpg"
+        ></video>
       </div>
     </div>
   );
